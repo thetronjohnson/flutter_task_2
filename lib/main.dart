@@ -85,25 +85,37 @@ class Body extends StatelessWidget {
               ],),
             ),
             Container(
-              height: 150,
+              height: 200,
+              padding: EdgeInsets.only(top:20),
               child: Card(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children:<Widget>[
-                          CircleAvatar(
-                            radius: 25,
-                            child: ClipOval(child: Image.asset('assets/goku.png'),)
-                          ),
-                          Text("Goku"),
-                          Icon(Icons.collections),
-                          Column(children: <Widget>[
-                            
-                          ],)
-                        ]
+                      child: Padding(
+                        padding: const EdgeInsets.only(top:20.0),
+                        child: Column(
+                          children: <Widget>[
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children:<Widget>[
+                                Expanded(
+                                    child: CircleAvatar(
+                                      radius: 25,
+                                      child: ClipOval(child: Image.asset('assets/jiren.jpg'),)
+                                    ),
+                                    flex: 1,
+                                ),
+                                Expanded(child: Text("Goku"),flex: 3,),
+                                Expanded(child: Icon(Icons.collections, color: Colors.grey),flex: 1,),
+                                Column(children: <Widget>[
+                                  
+                                ],)
+                              ]
+                            ),
+                          ],
+                        ),
                       ),
                       elevation: 2,
-                      
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(7.0),
                     ),
+            )
             )
           ],
         )
